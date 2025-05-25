@@ -125,7 +125,8 @@ Adapun hasil dari analisis yang diambil dari Data Profiling. Diketahui bahwa dat
 Distribusi nilai numerik seperti gambar 1 adalah distribusi atau distribusi nilai variabel dalam satu set data, menggambarkan frekuensi atau probabilitas nilai -nilai ini yang didistribusikan.
   Gambar 1. Distribusi Nilai Numerik
 
-  [![HL19XAN.md.png](https://iili.io/3LLSgrF.md.png)](https://freeimage.host/i/3LLSgrF)
+  ![DISTRIBUSI NUMBER](https://github.com/user-attachments/assets/21dd4d7f-9dfa-44bf-b5df-1f9da7a42fdd)
+
 
 Fitur userRatingCount dan adSpent memiliki distribusi yang sangat condong ke kanan (right-skewed), yang berarti sebagian besar aplikasi memiliki jumlah ulasan dan anggaran iklan yang rendah, sementara hanya sedikit aplikasi yang memiliki nilai sangat tinggi. Ini mengindikasikan keberadaan outlier pada kedua fitur tersebut. Fitur isCorporateEmailScore menunjukkan distribusi yang sangat sempit di kisaran nilai tinggi, khususnya mendekati 100, yang menandakan bahwa mayoritas aplikasi berasal dari alamat email yang memiliki skor tinggi dalam identifikasi sebagai email institusi atau korporat. Sementara itu, appAge memiliki distribusi yang lebih menyebar merata, dengan konsentrasi tertinggi pada usia sekitar 50 minggu, mencerminkan keragaman umur aplikasi dalam dataset. Fitur averageUserRating menampilkan pola diskrit dengan puncak pada nilai 0, 4, dan 5. Hal ini menunjukkan bahwa pengguna cenderung memberikan penilaian ekstrem—baik sangat rendah atau sangat tinggi—dan jarang memberikan nilai tengah. Informasi distribusi ini sangat penting untuk memahami skala, outlier, serta pola umum dalam data sebelum dilakukan pemodelan lebih lanjut.
 
@@ -136,7 +137,8 @@ Fitur userRatingCount dan adSpent memiliki distribusi yang sangat condong ke kan
 Correlation matrix seperti pada gambar 2 adalah tabel yang menampilkan koefisien korelasi yang mengukur kekuatan dan arah hubungan antara variabel.
   Gambar 2. Struktur data pada kolom Numerik
 
-  [![HL19ePs.md.png](https://iili.io/3LLrU1S.md.png)](https://freeimage.host/i/3LLrU1S)
+  ![CORRELATION MATRIX](https://github.com/user-attachments/assets/08851b2b-f244-4c67-a76f-bd0ad1b491bb)
+
 
 Gambar correlation matrix di atas menunjukkan hubungan linier antar fitur numerik dalam dataset. Nilai korelasi berkisar antara -1 hingga 1, yang mencerminkan kekuatan dan arah hubungan antar variabel. Terlihat bahwa fitur userRatingCount memiliki korelasi yang sangat kuat dengan adSpent, yaitu sebesar 0.87. Hal ini mengindikasikan bahwa semakin besar anggaran iklan suatu aplikasi, maka cenderung semakin banyak pula jumlah ulasan yang diterima aplikasi tersebut. Korelasi yang tinggi ini menunjukkan hubungan positif yang signifikan dan dapat menjadi informasi penting dalam pemodelan. Di sisi lain, fitur-fitur seperti isCorporateEmailScore, appAge, averageUserRating, dan coppaRisk memiliki korelasi rendah terhadap fitur lainnya, termasuk antar sesama mereka. Misalnya, isCorporateEmailScore memiliki korelasi negatif lemah dengan averageUserRating (-0.11), yang menunjukkan bahwa email dengan skor korporat yang tinggi tidak terlalu berhubungan dengan penilaian pengguna. Secara umum, sebagian besar fitur numerik menunjukkan hubungan yang lemah atau hampir tidak ada hubungan linier, kecuali antara userRatingCount dan adSpent.
 
@@ -265,8 +267,8 @@ Akurasi adalah metrik evaluasi untuk mengevaluasi pengukuran frekuensi pengukura
 
 Berikut rumus dari accuracy: 
 
-[![3LPzAhb.md.png](https://iili.io/3LtRDan.md.png)](https://freeimage.host/i/3LtRDan)
-  
+ <img width="477" alt="ACCURASHY" src="https://github.com/user-attachments/assets/fd452f29-4760-4496-a0be-6a7a43b63cf5" />
+
 
 Hasil dari modeling didapatkan evaluasi seperti tabel 1 dibawah ini. 
 
@@ -296,11 +298,11 @@ Selain itu, confussion matrix, berfungsi dengan membandingkan hasil prediksi mod
 
   Gambar 3.
 
-  [![3LPzAhb.md.png](https://iili.io/3LPzAhb.md.png)](https://freeimage.host/i/3LPzAhb)
-  
+  ![CMSVM](https://github.com/user-attachments/assets/5ef874c6-2c31-45f4-814d-2fe93647eeba)
+
   Gambar 4.
 
-  [![HL19NoX.md.png](https://iili.io/3LPROmP.md.png)](https://freeimage.host/i/3LPROmP)
+  ![CMDL](https://github.com/user-attachments/assets/add3622d-a686-42fe-a30c-0b3d57bf8e34)
 
 
 Diatas merupakan gambar 3 dan 4 sebagai confusion matrix. Dari gambar tersebut dapat dilihat bahwa banyak kasus risiko yang berhasil dikenali dengan benar (TP) dan yang terlewatkan (FN). Karena ini adalah problem klasifikasi biner risiko, maka False Negative (FN) adalah hal yang perlu diminimalkan dengan catatan yang berisiko (True) tidak boleh sampai diklasifikasikan sebagai tidak berisiko (false).Jadi berdasarkan akurasi dan confussion matrix. Deep Learning memiliki nilai akurasi tes sebesar 90% sedangkan SVM sebesar 91%. Sehingga SVM dapat dikatakan memiliki performa sedikit lebih baik dibanding menggunakan Deep Learning (Neural Network).
