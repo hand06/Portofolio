@@ -4,8 +4,9 @@
 
 
 <img width="521" alt="COUNT USER" src="https://github.com/user-attachments/assets/789d6cea-2c6f-4c4e-9164-dfb338659fae" />
-![HEATMAP RATING](https://github.com/user-attachments/assets/56fc9d16-7f27-42b6-bc33-8398dd85acc7)
+
 <img width="469" alt="COUNT RATING" src="https://github.com/user-attachments/assets/41732a0a-fe31-4215-af4e-8884059b09d7" />
+![HEATMAP RATING](https://github.com/user-attachments/assets/ea41637a-d58c-402d-9200-723ce5af85f9)
 
 
 ![Training and Validation RMSE](https://github.com/user-attachments/assets/cccc43d2-2bbc-4b80-b3cd-76e5e944ad97)
